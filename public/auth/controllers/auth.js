@@ -25,7 +25,7 @@ angular.module('mean.controllers.login', [])
                                 window.location = response.redirect;
                             }
                         } else {
-                            $location.url('/');
+                          window.location='/';
                         }
                     })
                     .error(function() {

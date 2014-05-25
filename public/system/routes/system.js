@@ -4,14 +4,15 @@
 angular.module('mean.system').config(['$stateProvider', '$urlRouterProvider',
         function($stateProvider, $urlRouterProvider) {
             // For unmatched routes:
-            $urlRouterProvider.otherwise('/');
+            $urlRouterProvider.otherwise('/kegauth');
 
             // states for my app
-            $stateProvider              
+            $stateProvider
                 .state('home', {
                     url: '/',
                     templateUrl: 'public/system/views/index.html'
                 })
+
                 .state('auth', {
                     templateUrl: 'public/auth/views/index.html'
                 });

@@ -1,7 +1,7 @@
 'use strict';
 
-// The Package is past automatically as first parameter
-module.exports = function(Kegauth, app, auth, database) {
+
+module.exports = function(app,auth) {
 
     var authorization = {
       'confirm': true,
@@ -38,8 +38,9 @@ module.exports = function(Kegauth, app, auth, database) {
     });
 
     /* PUT authorization */
-    app.put('/api/authorization', auth.requiresLogin, function(req, res) {
+    app.put('/api/authorization',  function(req, res) {
       var api_key = req.body.api_key;
+
       if(api_key !== 'pourme') {
         console.log('PUT auth fail...401');
         res.status(401).send();
@@ -61,5 +62,5 @@ module.exports = function(Kegauth, app, auth, database) {
     });
 
 
-    
+
 };
