@@ -5,7 +5,7 @@
        <button type="submit" class="btn btn-primary" style="width:100px">Refresh</button>
     </form>
     <br/>
-    <form  ng-submit="unlock()" ng-show="authenticated" ng-hide="kegauth.ttl">
+    <form  ng-submit="unlock()" ng-show="authenticated && !kegauth.ttl">
        <button type="submit" class="btn btn-primary" style="width:100px">Unlock</button>
     </form>
 </div>

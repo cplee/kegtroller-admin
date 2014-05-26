@@ -109,7 +109,7 @@ module.exports = function(app, passport, db) {
     app.use(flash());
 
     // Setting the fav icon and static folder
-    app.use(favicon());
+    app.use(favicon(__dirname + '/../../public/favicon.ico'));
 
     app.get('/modules/aggregated.js', function(req, res) {
         res.setHeader('content-type', 'text/javascript');
